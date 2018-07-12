@@ -131,6 +131,11 @@ var getForecast = function () {
                     console.log('daytime        : ' + daytime);
                 }
 
+                if (config.has('influxdb.https_insecure')) {
+                    if (config.get('influxdb.https_insecure')) {
+                        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+                    }
+                }
                 influx.writePoints(points).catch(err => {
                     console.error('Error writing to InfluxDB', err)
                 })

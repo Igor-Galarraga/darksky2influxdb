@@ -69,6 +69,7 @@ influxdb:
 |darksky - `longitude` and `latitude `|Coordinates of forecast location (in decimal degrees).<br><br>**Type:** `float`<br>**Possible values:** `latitude: 47.20296790272209` and `longitude:-123.41670367098749` |
 |influxdb - `host`|Server your influxdb is running. You can add server port<br><br>**Type:** `string`<br>**Possible values:** `localhost` , `192.168.188.2`, `192.168.188.2:8765` |
 |influxdb - `protocol`|Communication protocol for your influxdb server<br><br>**Type:** `string`<br>**Possible values:** `http` , `https` |
+|influxdb - `https_insecure`|Optional field. Over https protocol, set true for insecure mode (selfsigned certs)<br><br>**Type:** `boolean`<br>**Possible values:** `true` , `false` |
 |influxdb - `database`|Name of your Database the forecast data is stored. <br><br>**Type:** `string`<br>**Possible values:** `weather` , `forecast`|
 |influxdb - `username`|User with writing privileges on the database|
 |influxdb - `password`|Password of user with writing privileges on the database|
