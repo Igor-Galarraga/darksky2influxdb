@@ -22,6 +22,7 @@ if (!darkskyConfig.key) {
 
 const influx = new Influx.InfluxDB({
     host: influxConfig.host,
+    protocol: influxConfig.protocol,
     database: influxConfig.database,
     username: influxConfig.username,
     password: influxConfig.password,

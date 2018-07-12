@@ -54,6 +54,7 @@ darksky:
   latitude: 47.20296790272209
 influxdb:
   host: 192.168.188.2
+  protocol: http
   database: weather
   username: darkskyimport_user
   password: supersecretpassword!?
@@ -66,7 +67,8 @@ influxdb:
 |darksky - `key`|get your darksky key here https://darksky.net/dev/register<br><br>**Type:** `string`<br>**Possible values:** `abcdefghiklmnopqrstuvwxyz1234567` |
 |darksky - `units`|Return weather conditions in the requested units. See https://darksky.net/dev/docs/forecast<br><br>**Type:** `string`<br>**Possible values:** `auto`,`ca`,`uk2`,`us`,`si` |
 |darksky - `longitude` and `latitude `|Coordinates of forecast location (in decimal degrees).<br><br>**Type:** `float`<br>**Possible values:** `latitude: 47.20296790272209` and `longitude:-123.41670367098749` |
-|influxdb - `host`|Server your influxdb is running <br><br>**Type:** `string`<br>**Possible values:** `localhost` , `192.168.188.2` |
+|influxdb - `host`|Server your influxdb is running. You can add server port<br><br>**Type:** `string`<br>**Possible values:** `localhost` , `192.168.188.2`, `192.168.188.2:8765` |
+|influxdb - `protocol`|Communication protocol for your influxdb server<br><br>**Type:** `string`<br>**Possible values:** `http` , `https` |
 |influxdb - `database`|Name of your Database the forecast data is stored. <br><br>**Type:** `string`<br>**Possible values:** `weather` , `forecast`|
 |influxdb - `username`|User with writing privileges on the database|
 |influxdb - `password`|Password of user with writing privileges on the database|
